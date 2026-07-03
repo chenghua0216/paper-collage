@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>紙樂拼貼 Paper Collage</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>" />
+  </head>
+  <body>
+    <header id="toolbar">
+      <div class="brand">✂️ 紙樂拼貼</div>
+
+      <div class="group" id="paper-buttons">
+        <button class="paper-btn" data-type="colored">
+          <span class="swatch" style="background:#06d6a0"></span>色紙
+        </button>
+        <button class="paper-btn" data-type="kraft">
+          <span class="swatch" style="background:#c8a97e"></span>牛皮紙
+        </button>
+        <button class="paper-btn" data-type="newsprint">
+          <span class="swatch" style="background:#d8d5cd"></span>報紙
+        </button>
+        <button class="paper-btn" data-type="corrugated">
+          <span class="swatch" style="background:#8a7462"></span>瓦楞紙
+        </button>
+      </div>
+
+      <div class="group">
+        <button id="play-btn" class="primary">▶ 播放</button>
+        <label class="slider-label">
+          循環 <span id="loop-value">8</span> 秒
+          <input id="loop-slider" type="range" min="4" max="16" step="1" value="8" />
+        </label>
+      </div>
+
+      <div class="group">
+        <button id="delete-btn" disabled>刪除選取</button>
+        <button id="clear-btn">清空畫布</button>
+      </div>
+
+      <div class="hint">點紙材加入紙片,拖曳、旋轉擺放;播放線掃過紙片時,位置越高音越高、越大聲音越長。</div>
+    </header>
+    <main id="stage-container"></main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
